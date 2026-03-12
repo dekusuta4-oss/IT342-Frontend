@@ -1,0 +1,160 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  /* Vibrant gradient matching your reference image */
+  background: linear-gradient(to right, #ff7a00, #ff004d);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  color: #333;
+}
+
+.page-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+}
+
+/* --- Brand Header Styling --- */
+.brand-header {
+  text-align: center;
+  color: white;
+  margin-bottom: 30px;
+}
+
+.logo-circle {
+  background-color: white;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 15px auto;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.brand-header h1 {
+  margin: 0;
+  font-size: 36px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+.brand-header p {
+  margin: 5px 0 0 0;
+  font-size: 15px;
+  font-weight: 400;
+  opacity: 0.95;
+}
+
+/* --- Form Card Styling --- */
+.auth-container {
+  background: white;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 12px 35px rgba(0,0,0,0.25);
+  width: 100%;
+  max-width: 420px;
+  text-align: center;
+}
+
+.auth-container h2 {
+  margin-top: 0;
+  color: #1a1a1a;
+  margin-bottom: 25px;
+  font-size: 22px;
+}
+
+.auth-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.auth-container input {
+  padding: 14px;
+  border: 1.5px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 15px;
+  outline: none;
+  background-color: #fafafa;
+  transition: all 0.3s ease;
+}
+
+.auth-container input:focus {
+  border-color: #ff7a00;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 4px rgba(255, 122, 0, 0.1);
+}
+
+.auth-container button {
+  padding: 14px;
+  background: linear-gradient(to right, #ff7a00, #ff4500);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.1s, box-shadow 0.3s;
+  margin-top: 10px;
+  box-shadow: 0 4px 10px rgba(255, 122, 0, 0.3);
+}
+
+.auth-container button:hover {
+  box-shadow: 0 6px 15px rgba(255, 122, 0, 0.4);
+}
+
+.auth-container button:active {
+  transform: scale(0.98);
+}
+
+.auth-container button:disabled {
+  background: #ffb873;
+  box-shadow: none;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.link-text {
+  color: #ff7a00;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.link-text:hover {
+  color: #ff004d;
+}
+
+.error-wrapper {
+  min-height: 60px; /* Reserves exactly enough space so the form never jumps */
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.error-alert {
+  color: #d9534f;
+  background-color: #fdf7f7;
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: 1px solid #d9534f;
+  font-size: 14px;
+  width: 100%;
+  animation: fadeIn 0.3s ease-in-out; /* Adds a smooth fade-in effect */
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
